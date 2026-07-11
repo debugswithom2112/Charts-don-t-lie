@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+	<html lang = "en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="Page description here" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<title>Charts don't lie</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+</head>
+<body>
+	<header>
+			<!-- Header Logo -->
+
+<img src="{{ url_for('static', filename='logo.jpg.webp') }}"
+
+     alt="Website logo"
+
+     class="logo">
+ 
+		<h1>Charts Don't Lie !</h1>
+		<h3>World Happiness Index</h3>
+		<h5>Based on 2015 data</h5>
+	</header>
+
+	<main>
+<!-- Region waala dropdown menu feature -->
+		<section>
+			<div class = "DropdownMenu" >
+				<label for="Region">Region</label>
+				<select id="Region">
+				<option>Australia and New Zealand</option>
+				<option>Central and Eastern Europe</option>
+				<option>Eastern Asia</option>
+				<option>Latin America and the Caribbean</option>
+				<option>Middle East and Northern Africa</option>
+				<option>North America</option>
+				<option>South Eastern Asia</option>
+				<option>Southern Asia</option>
+				<option>Sub-Saharan Africa</option>
+				<option>Western Europe</option>
+			</select>
+		</div>
+		</section>
+
+<!-- Country waala dropdown menu-->
+	<section>
+		<div class = "Countries_menu" >
+			<label for="Country">Country</label>
+			<select id="Country">
+				<option>Afghanistan</option>
+				<option>Albania</option>
+				<option>Algeria</option>
+				<option>Angola</option>
+				<option>Argentina</option>
+				<option>Armenia</option>
+				<option>Australia</option>
+				<option>Austria</option>
+				<option>Azerbaijan</option>
+				<option>Bahrain</option>
+				<option>Bangladesh</option>
+				<option>Belarus</option>
+				<option>Belgium</option>
+				<option>Benin</option>
+				<option>Bhutan</option>
+				<option>Bolivia</option>
+				<option>Bosnia and Herzegovina</option>
+				<option>Botswana</option>
+				<option>Brazil</option>
+				<option>Bulgaria</option>
+				<option>Burkina Faso</option>
+				<option>Burundi</option>
+				<option>Cambodia</option>
+				<option>Cameroon</option>
+				<option>Canada</option>
+				<option>Central African Republic</option>
+				<option>Chad</option>
+				<option>Chile</option>
+				<option>China</option>
+				<option>Colombia</option>
+				<option>Comoros</option>
+				<option>Congo (Brazzaville)</option>
+				<option>Congo (Kinshasa)</option>
+				<option>Costa Rica</option>
+				<option>Croatia</option>
+				<option>Cyprus</option>
+				<option>Czech Republic</option>
+				<option>Denmark</option>
+				<option>Djibouti</option>
+				<option>Dominican Republic</option>
+				<option>Ecuador</option>
+				<option>Egypt</option>
+				<option>El Salvador</option>
+				<option>Estonia</option>
+				<option>Ethiopia</option>
+				<option>Finland</option>
+				<option>France</option>
+				<option>Gabon</option>
+				<option>Georgia</option>
+				<option>Germany</option>
+				<option>Ghana</option>
+				<option>Greece</option>
+				<option>Guatemala</option>
+				<option>Guinea</option>
+				<option>Haiti</option>
+				<option>Honduras</option>
+				<option>Hong Kong</option>
+				<option>Hungary</option>
+				<option>Iceland</option>
+				<option>India</option>
+				<option>Indonesia</option>
+				<option>Iran</option>
+				<option>Iraq</option>
+				<option>Ireland</option>
+				<option>Israel</option>
+				<option>Italy</option>
+				<option>Ivory Coast</option>
+				<option>Jamaica</option>
+				<option>Japan</option>
+				<option>Jordan</option>
+				<option>Kazakhstan</option>
+				<option>Kenya</option>
+				<option>Kosovo</option>
+				<option>Kuwait</option>
+				<option>Kyrgyzstan</option>
+				<option>Laos</option>
+				<option>Latvia</option>
+				<option>Lebanon</option>
+				<option>Lesotho</option>
+				<option>Liberia</option>
+				<option>Libya</option>
+				<option>Lithuania</option>
+				<option>Luxembourg</option>
+				<option>Macedonia</option>
+				<option>Madagascar</option>
+				<option>Malawi</option>
+				<option>Malaysia</option>
+				<option>Mali</option>
+				<option>Malta</option>
+				<option>Mauritania</option>
+				<option>Mauritius</option>
+				<option>Mexico</option>
+				<option>Moldova</option>
+				<option>Mongolia</option>
+				<option>Montenegro</option>
+				<option>Morocco</option>
+				<option>Mozambique</option>
+				<option>Myanmar</option>
+				<option>Nepal</option>
+				<option>Netherlands</option>
+				<option>New Zealand</option>
+				<option>Nicaragua</option>
+				<option>Niger</option>
+				<option>Nigeria</option>
+				<option>North Cyprus</option>
+				<option>Norway</option>
+				<option>Oman</option>
+				<option>Pakistan</option>
+				<option>Palestinian Territories</option>
+				<option>Panama</option>
+				<option>Paraguay</option>
+				<option>Peru</option>
+				<option>Philippines</option>
+				<option>Poland</option>
+				<option>Portugal</option>
+				<option>Qatar</option>
+				<option>Romania</option>
+				<option>Russia</option>
+				<option>Rwanda</option>
+				<option>Saudi Arabia</option>
+				<option>Senegal</option>
+				<option>Serbia</option>
+				<option>Sierra Leone</option>
+				<option>Singapore</option>
+				<option>Slovakia</option>
+				<option>Slovenia</option>
+				<option>Somaliland region</option>
+				<option>South Africa</option>
+				<option>South Korea</option>
+				<option>Spain</option>
+				<option>Sri Lanka</option>
+				<option>Sudan</option>
+				<option>Suriname</option>
+				<option>Swaziland</option>
+				<option>Sweden</option>
+				<option>Switzerland</option>
+				<option>Syria</option>
+				<option>Taiwan</option>
+				<option>Tajikistan</option>
+				<option>Tanzania</option>
+				<option>Thailand</option>
+				<option>Togo</option>
+				<option>Trinidad and Tobago</option>
+				<option>Tunisia</option>
+				<option>Turkey</option>
+				<option>Turkmenistan</option>
+				<option>Uganda</option>
+				<option>Ukraine</option>
+				<option>United Arab Emirates</option>
+				<option>United Kingdom</option>
+				<option>United States</option>
+				<option>Uruguay</option>
+				<option>Uzbekistan</option>
+				<option>Venezuela</option>
+				<option>Vietnam</option>
+				<option>Yemen</option>
+				<option>Zambia</option>
+				<option>Zimbabwe</option>
+			</select>
+		</div>
+	</section>
+
+
+<!-- Criterion dropdown -->
+<section>
+<select id="Criterion">
+  <option value="Happiness Score">Happiness Score</option>
+  <option value="Economy (GDP per Capita)">Economy</option>
+  <option value="Health (Life Expectancy)">Health</option>
+  <option value="Freedom">Freedom</option>
+  <option value="Trust (Government Corruption)">Trust</option>
+  <option value="Generosity">Generosity</option>
+</select>
+</section>
+</main>
+
+
+<!-- All images -->
+<div class="image-container">
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='Main map.jpeg') }}" alt="Main map">
+    </div>
+
+    <div class="item">
+        <img src="{{ url_for('static', filename='charts.webp') }}" alt="Charts logo">
+    </div>
+
+    <div class="item">
+        <h2>India</h2>
+        <img src="{{ url_for('static', filename='bargraph1.png') }}" alt="India">
+    </div>
+
+    <div class="item">
+        <h2>Israel</h2>
+        <img src="{{ url_for('static', filename='bargraph2.png') }}" alt="Israel">
+    </div>
+
+    <div class="item">
+        <h2>Iceland</h2>
+        <img src="{{ url_for('static', filename='bargraph3.png') }}" alt="Iceland">
+    </div>
+
+</div>
+<!-- Anchor tags -->
+	<a href="/graph">Our Charts</a>
+	<a href="/toppers">Table toppers and more</a>
+	<a href="/tech">Technical approach</a>
+	<a href="/about">About</a>
+
+
+<!-- Script ko connect karna -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

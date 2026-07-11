@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.header-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo{
+
+    position:absolute;
+
+    top:20px;
+
+    left:20px;
+
+    width:80px;
+}
+
+body{
+    background-color:#dff0fb;
+
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(100,181,246,0.15) 2px,
+            rgba(100,181,246,0.15) 4px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 2px,
+            rgba(100,181,246,0.15) 2px,
+            rgba(100,181,246,0.15) 4px
+        );
+
+    min-height:100vh;
+    padding:30px;
+    animation:fadeIn 1s ease;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    text-align:center;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    margin-bottom:40px;
+}
+
+header h1{
+    font-size:3rem;
+    color:#1565c0;
+}
+
+header h3{
+    color:#555;
+    margin-top:10px;
+}
+
+header h5{
+    color:#777;
+    margin-top:5px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
+    margin-bottom:40px;
+}
+
+/* =========================
+   DROPDOWN CARDS
+========================= */
+
+.DropdownMenu,
+.Countries_menu,
+.CriterionMenu{
+
+    width:320px;
+
+    padding:20px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    transition:all 0.3s ease;
+}
+
+.DropdownMenu:hover,
+.Countries_menu:hover,
+.CriterionMenu:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   LABELS
+========================= */
+
+label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#333;
+}
+
+/* =========================
+   SELECT BOXES
+========================= */
+
+select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #90caf9;
+
+    border-radius:10px;
+
+    outline:none;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+select:focus{
+
+    border-color:#1565c0;
+
+    box-shadow:0 0 10px rgba(21,101,192,0.3);
+}
+
+/* =========================
+   RESULT BOX
+========================= */
+
+#result{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:white;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   IMAGE CONTAINER
+========================= */
+
+.image-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+.image-container img{
+
+    width:400px;
+
+    height:auto;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+.image-container img:hover{
+
+    transform:scale(1.03);
+}
+
+/* =========================
+   GENERAL IMAGES
+========================= */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+    margin:auto;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#1565c0;
+
+    color:white;
+
+    padding:12px 20px;
+
+    margin:10px;
+
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+a:hover{
+
+    background:#0d47a1;
+
+    transform:translateY(-4px);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    text-align:center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    padding:20px;
+
+    color:#666;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e3f2fd;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#64b5f6;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1565c0;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .DropdownMenu,
+    .Countries_menu,
+    .CriterionMenu{
+        width:100%;
+    }
+
+    .image-container img{
+        width:100%;
+    }
+
+    a{
+        display:block;
+        width:90%;
+        margin:10px auto;
+        text-align:center;
+    }
+    .image-container {
+    display: flex;
+    flex-wrap: wrap;        /* Moves images to next line if needed */
+    justify-content: center;
+    gap: 20px;              /* Space between images */
+    align-items: flex-start;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 250px;           /* Change as needed */
+    height: auto;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+.image-container{
+    display: flex;
+    flex-wrap: wrap;      /* Makes them go to a second line if needed */
+    justify-content: center;
+    gap: 20px;
+}
+
+.item{
+    text-align: center;
+}
+
+.item img{
+    width: 220px;
+    height: auto;
+}
+}
